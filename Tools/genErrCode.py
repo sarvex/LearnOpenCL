@@ -71,8 +71,8 @@ const char *err_code (cl_int err_in)
 {
     switch (err_in) {''')
 for err in errors:
-    print('        case ' + err + ':')
-    print('            return (char*)"' + err.strip() + '";')
+    print(f'        case {err}:')
+    print(f'            return (char*)"{err.strip()}";')
 
 print('''
         default:
